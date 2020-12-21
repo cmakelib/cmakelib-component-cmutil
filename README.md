@@ -15,6 +15,10 @@ List of functionality
 
 - [CMLIB] library installed
 
+## License
+
+Project is licensed under (BSD-3-Clause License)[LICENSE]
+
 
 
 [CMUTIL_PROPERTY_FILE.cmake]: ./system_modules/CMUTIL_PROPERTY_FILE.cmake
