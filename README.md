@@ -17,12 +17,12 @@ List of functionality
 
 ## License
 
-Project is licensed under (BSD-3-Clause License)[LICENSE]
+Project is licensed under [BSD-3-Clause License](LICENSE)
 
 
 
 [CMUTIL_PROPERTY_FILE.cmake]: ./system_modules/CMUTIL_PROPERTY_FILE.cmake
 [CMUTIL_VERSION.cmake]:       ./system_modules/CMUTIL_VERSION.cmake
-[CMUTIL_VERSION.cmake]:       ./system_modules/CMUTIL_VERSION.cmake
+[CMUTIL_TRAIT.cmake]:         ./system_modules/CMUTIL_TRAIT.cmake
 [CMLIB]:                      https://github.com/cmakelib/cmakelib
 [buildbadge_github]:          https://github.com/cmakelib/cmakelib-component-util/workflows/Tests/badge.svg
