@@ -40,5 +40,5 @@ ENDIF()
 
 
 
-TEST_INVALID_CMAKE_RUN("inject_version")
-TEST_INVALID_CMAKE_RUN("inject_version_txt")
+TEST_INVALID_CMAKE_RUN("invalid_version")
+TEST_INVALID_CMAKE_RUN("invalid_version_txt")
