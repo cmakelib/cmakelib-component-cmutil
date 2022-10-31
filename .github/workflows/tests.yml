@@ -17,7 +17,7 @@ jobs:
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: ubuntu-latest
     container:
-        image: cmakelib/build-linux:${{ matrix.image }}
+        image: koudis/cmakelib-build-linux:${{ matrix.image }}
     steps:
       - uses: actions/checkout@v2
       - name: Init CMakelib
