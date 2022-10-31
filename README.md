@@ -17,7 +17,7 @@ List of functionality
 
 ## License
 
-Project is licensed under [BSD-3-Clause License](LICENSE)
+Project is licensed under [MIT](LICENSE)
 
 
 
