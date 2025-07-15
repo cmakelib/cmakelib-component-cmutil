@@ -28,7 +28,7 @@ jobs:
     container:
         image: ghcr.io/cmakelib/${{ matrix.image }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
@@ -42,7 +42,7 @@ jobs:
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
@@ -58,7 +58,7 @@ jobs:
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
