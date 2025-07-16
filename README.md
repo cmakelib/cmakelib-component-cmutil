@@ -14,7 +14,11 @@ List of functionality
 
 ## Requirements
 
-- [CMLIB] library installed
+CMUTIL is intended to be used thru [CMLIB].
+
+CMUTIL is not supposed to be used separately.
+
+To use the component install [CMLIB] and call `FIND_PACKAGE(CMLIB COMPONENTS CMUTIL)`.
 
 ## License
 
