@@ -16,17 +16,19 @@ jobs:
         image: [
           "test_debian:bullseye",
           "test_debian:bookworm",
+          "test_debian:trixie",
           "test_ubuntu:2004",
           "test_ubuntu:2204",
           "test_ubuntu:2404",
-          "test_fedora:41"
+          "test_fedora:41",
+          "test_fedora:42"
           ]
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: ubuntu-latest
     container:
         image: ghcr.io/cmakelib/${{ matrix.image }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
@@ -40,7 +42,7 @@ jobs:
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
@@ -56,7 +58,7 @@ jobs:
         cmdopt: [ "-P ./CMakeLists.txt", "." ]
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Init CMakelib
         run: |
             git clone "https://github.com/cmakelib/cmakelib.git"
