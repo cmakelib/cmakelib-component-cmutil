@@ -108,7 +108,7 @@ ENDFUNCTION()
 
 ##
 #
-# Locate ${CMAKE_CURRENT_LIST_DIR}/version.txt, and parse the version.
+# Locate ${CMAKE_CURRENT_SOURCE_DIR}/version.txt, and parse the version.
 # The version is expected to be defined as a key-value `version=X.Y.Z`
 #
 # If the version.txt file doesn't exist, or doesn't contain version key-value, an error occurs
@@ -135,7 +135,7 @@ ENDFUNCTION()
 
 ##
 #
-# Locate ${CMAKE_CURRENT_LIST_DIR}/version.txt,
+# Locate ${CMAKE_CURRENT_SOURCE_DIR}/version.txt,
 # read the first line and compare version stored in version.txt
 # with ${version}.
 #
