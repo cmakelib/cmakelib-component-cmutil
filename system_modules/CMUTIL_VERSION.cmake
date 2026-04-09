@@ -108,11 +108,38 @@ ENDFUNCTION()
 
 ##
 #
+# Locate ${CMAKE_CURRENT_LIST_DIR}/version.txt, and parse the version.
+# The version is expected to be defined as a key-value `version=X.Y.Z`
+#
+# If the version.txt file doesn't exist, or doesn't contain version key-value, an error occurs
+#
+# <function>(
+# 		<output_var>
+# )
+FUNCTION(CMUTIL_VERSION_GET_FROM_VERSION_FILE output_var)
+	SET(version_file ${ARGN})
+	IF("${version_file}" STREQUAL "")
+		SET(version_file "${CMAKE_CURRENT_SOURCE_DIR}/version.txt")
+	ENDIF()
+
+	CMUTIL_PROPERTY_FILE_READ("${version_file}" inject)
+	IF(NOT inject_version)
+		MESSAGE(FATAL_ERROR "${version_file} is not valid")
+	ENDIF()
+	CMUTIL_VERSION_CHECK(${inject_version})
+
+	SET(${output_var} ${inject_version} PARENT_SCOPE)
+ENDFUNCTION()
+
+
+
+##
+#
 # Locate ${CMAKE_CURRENT_LIST_DIR}/version.txt,
 # read the first line and compare version stored in version.txt
 # with ${version}.
 #
-# If versions does not match error occurres.
+# If versions does not match error occurs.
 #
 # <function>(
 #		<version>
