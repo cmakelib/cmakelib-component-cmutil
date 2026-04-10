@@ -32,6 +32,13 @@ ENDIF()
 CMUTIL_VERSION_VALIDATE_VERSION_FILE_FOR("1.58.3")
 
 
+CMUTIL_VERSION_GET_FROM_VERSION_FILE(parsed_version)
+IF (NOT parsed_version STREQUAL "1.58.3")
+	MESSAGE(FATAL_ERROR " Error when parsing version from version.txt. Expected: \"1.58.3\", Actual: ${parsed_version}")
+ELSE ()
+	MESSAGE("Passed test for: CMUTIL_VERSION_GET_FROM_VERSION_FILE")
+ENDIF()
+
 
 CMUTIL_VERSION_NORMALIZE(version_normalized "1.58.3")
 IF(NOT version_normalized STREQUAL "001058003")
